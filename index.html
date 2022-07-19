@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Animation Guide</title>
+</head>
+<body>
+
+    <header>
+        <!-- Dados -->
+        <nav class="dados">
+            <ul>
+                <li>Menu</li>
+                <li class="select">
+                    <select>
+                        <option value="#">
+                            <a href="#">Section 1</a>
+                        </option>
+                        <option value="#">
+                            <a href="#">Transform</a>
+                        </option>
+                        <option value="#">
+                            <a href="#">Section 1</a>
+                        </option>
+                        <option value="#">
+                            <a href="#">Section 1</a>
+                        </option>
+                        <option value="#">
+                            <a href="#">Section 1</a>
+                        </option>
+                    </select>
+                </li>
+                <li>Mais</li>
+                <li>Curiosidades</li>
+                <li>Sobre</li>
+            </ul>
+
+        </nav>
+        <!-- Entrar e sair -->            
+        <nav class="sign">
+            <ul>
+                <li class="button">
+                    <button>Sign Up</button>
+                </li>
+                <li class="button">
+                    <button>Sign In</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="div1">
+
+            <div class="text-area" style="--bgColor: #f5f5f544">
+                <h1>Animações em CSS</h1>
+                <p>Animações em CSS são uma ótima estrategia quando queremos passar emoções para os clintes. Por tanto, separamos alguns assuntos interessantes para nós ajudar neste estudo.</p>
+            </div>
+
+            <div class="card-area">
+                <div class="card">
+                    <img src="/assets/midia/img1.png" alt="">
+                    <div class="text">
+                        <h3>Funcional</h3>
+                        <ul>
+                            <li>Oitmiza a experiência</li>
+                            <li>Guia a atenção</li>
+                            <li>Feedback + Preparação</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/midia/img2.png" alt="">
+                    <div class="text">
+                        <h3>Funcional</h3>
+                        <ul>
+                            <li>Oitmiza a experiência</li>
+                            <li>Guia a atenção</li>
+                            <li>Feedback + Preparação</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/midia/img3.png" alt="">
+                    <div class="text">
+                        <h3>Funcional</h3>
+                        <ul>
+                            <li>Oitmiza a experiência</li>
+                            <li>Guia a atenção</li>
+                            <li>Feedback + Preparação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="transform" class="div2 bg" style="--color: #157; --text: #000">
+
+            <div class="text-area fade-left" style="--bgColor: #fff">
+                <h2>Tag <b>transform</b></h2>
+                <p>Com esta propriedade conseguimos fazer algumas alterações nos elementos de forma muito interessante. Conseguimos aumentar o tamanho, arrastar para o lado e outras coisas.</p>
+            </div>
+
+            <div class="card-area4">
+                <div class="card fade-left" style="--delay: 400ms;">
+                    <h3>Translate( )</h3>
+                    <p>Faz com que o elemento ande para um lado. Podemos usar como parametro (X, Y)</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>translateX(px, vh, ...)</li>
+                        <li>translateY(px, vh, ...)</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-left">
+                    <h3>Scale( )</h3>
+                    <p>Aumenta ou diminui o tamanho do elemento, como paramentro default temos 1. Podemos usar como parametro (X, Y)</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>scaleX(px, vh, ...)</li>
+                        <li>scaleY(px, vh, ...)</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-left" style="--delay: 400ms">
+                    <h3>Rotate( )</h3>
+                    <p>Com ele podemos rotacionar o elemento. Podemos usar como parametro (X, Y), esses valores são em <b>deg</b> ou <b>turn</b>.</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>rotateX( )</li>
+                        <li>rotateY( )</li>
+                        <li>rotateZ( )</li>
+                        <li>rotate3d( )</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-left">
+                    <h3>Skew( )</h3>
+                    <p>Dá uma inclinada no elemento. Podemos usar como parametro (X, Y), esses valores são em <b>deg</b> ou <b>turn</b>.</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>skewX(deg, turn)</li>
+                        <li>skewY(deg, turn)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="box fade-left"></div> -->
+        </section>
+
+
+        <section class="div3" style="height: 105vh;">
+
+            <div class="text-area fade-right" style="--bgColor: #f5f5f544">
+                <h2><b>Transition</b></h2>
+                <p>Essa propriedade é muito importante para definirmos como será feita a transição no elemento, se será rápida ou mais lenta, se vai ter um delay ou não, e outros efeitos legais.</p>
+                <p>ShortHand: transition: &lsaquo;propriedade&rsaquo; &lsaquo;tempo de duração&rsaquo; &lsaquo;suavização&rsaquo; &lsaquo;delay&rsaquo;</p>
+            </div>
+
+            <div class="card-area4">
+                <div class="card fade-right">
+                    <h3>transition-propety</h3>
+                    <p>Neste momento vamos passar as propriedades do css que irá passar pela transição.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>transition-property: hight;</li>
+                        <li>transition-property: opacity;</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>transition-duration( )</h3>
+                    <p>Escolhemos a duraçção que a transição vai ter.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>transition-duration: .5s</li>
+                        <li>transition-duration: 500ms</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right">
+                    <h3>transition-delay</h3>
+                    <p>Definimos um tempo para acontecer a transição depois de uma determinada ação.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>transition-delay: 1s</li>
+                        <li>transition-delay: 1000ms</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>transition-timming-function</h3>
+                    <p>Definimos a suaveidade que a transição vai acontecer.</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>ease-in</li>
+                        <li>ease-out</li>
+                        <li>ease-in-out</li>
+                        <li>cubic-bezier()</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="box fade-right"></div> -->
+        </section>
+
+        <section class="div4 bg" style="--color: #157; --text: #000">
+
+            <div class="text-area fade-right" style="--bgColor: #f5f5f5">
+                <h2><b>keyframe</b></h2>
+                <p>Essa função nos ajuda a criar animações, onde vamos passar ações que vão ocorrer do começo até o fim (Sempre que possível utilize <b>transform</b> ou <b>opacity</b>).</p>
+                <pre style="text-align: center;">@keyframe {
+                        0% ou from {
+                            // code
+        }
+                        100% ou to {
+                            // code
+        }
+}
+                </pre>
+            </div>
+
+            <div class="text-area fade-right" style="--bgColor: #f5f5f5; margin-top: -5px;">
+                <h2><b>Animation</b></h2>
+                <p>Essa propriedade é necessária quando queremos chamar o <b>keyframe</b>, nela vamos passar alguns paramêtros importantes.</p>
+            </div>
+
+            <div class="card-area4">
+                <div class="card fade-right">
+                    <h3>animation-name</h3>
+                    <p>Vamos passar o nome da animação, onde vai estar no keyfram.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>animation-name: rotate;</li>
+                        <li>animation-name: transparent;</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>animation-duration( )</h3>
+                    <p>Escolhemos a duraçção que a animação vai ter.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>animation-duration: .5s</li>
+                        <li>animation-duration: 500ms</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right">
+                    <h3>animation-timming-function</h3>
+                    <p>Como a animação vai progredir durante a sua execução.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>ease</li>
+                        <li>cubic-bezier</li>
+                        <li>steps( 'number' )</li>
+                        <li>linear</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>animation-delay</h3>
+                    <p>Definimos o delay que a animação vai ter.</p>
+                    <p>Temos também:</p>
+                    <ul>
+                        <li>animation-delay: .4s</li>
+                        <li>animation-delay: 400ms</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right">
+                    <h3>animation-interation-count</h3>
+                    <p>Número de vezes que a animação vai acontecer.</p>
+                    <p>Por exemplo:</p>
+                    <ul>
+                        <li>2</li>
+                        <li>Infinite</li>
+                    </ul>
+                </div>
+
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>animation-fill-mode</h3>
+                    <p>Defini quais valoressão aplicados antes e/ou deposi da animação.</p>
+                    <p>Temos também:</p>
+                    <p><b>Forwards</b>: Último estado da animação deve ser mantido</p>
+                    <p><b>Backwards</b>: Pega o estado inicial da animação e se mantém.</p>
+                    <p><b>Both</b>: Ambos os casos</p>
+                </div>
+
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>animation-play-state</h3>
+                    <p>Definimos se animação esta sendo executada</p>
+                </div>
+                <div class="card fade-right" style="--delay: 400ms">
+                    <h3>animation ShortHand</h3>
+                    <p>animation: </p>
+                    <p>ShortHand: animation: &lsaquo;propriedade&rsaquo; &lsaquo;tempo de duração&rsaquo; &lsaquo;suavização&rsaquo; &lsaquo;delay&rsaquo; &lsaquo;interation-count&rsaquo; &lsaquo;direção&rsaquo; &lsaquo;fill mode&rsaquo; &lsaquo;play-state&rsaquo;</p>
+                </div>
+            </div>
+
+            <!-- <div class="box fade-up"></div> -->
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>Create by: Lucas Alexsander</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

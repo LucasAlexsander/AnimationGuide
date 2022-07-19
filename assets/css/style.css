@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #157bad; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #157; 
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+header {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    z-index: 99;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+header nav ul li,
+nav ul li select,
+nav ul li button {
+    list-style-type: none;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 8px solid transparent;
+    cursor: pointer;
+    margin-right: 30px;
+    font-weight: 500;
+    color: #69666B;
+    transition: all .2s ease-in-out;
+}
+
+nav ul li.select,
+nav ul li.button {
+    padding: 0;
+    border: 0;
+}
+nav ul li.select select,
+nav ul li.button button {
+    padding: 13px 18px;
+    width: 100%;
+}
+nav ul li.select select:focus-within {
+    border-radius: 30px 30px 0 0;
+}
+nav ul li.select select * {
+    border-radius: 15px;
+}
+nav ul li select,
+nav ul li button  {
+    background: inherit;
+    border: none;
+}
+header nav.dados ul {
+    padding: 0 100px;
+}
+.container {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    place-items: center;
+    background: url("../midia/bg.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    color: whitesmoke;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0 8vw;
+    overflow: hidden;
+}
+section:first-child {
+    justify-content: center;
+}
+section h1, section h2, section h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+section p {
+    text-indent: 15px;
+    margin-bottom: 5px;
+}
+section div.text-area {
+    width: 100%;
+    height: auto;
+    margin: 40px 0 40px 0;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, .5);
+    border-radius: .25rem;
+    padding: 13px 15px;
+    background: var(--bgColor);
+}
+section div.card-area,
+section div.card-area4 {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+div.card-area .card {
+    width: 100%;
+    height: inherit;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    border-radius: 0.25rem;
+    background: #f5f5f555;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: transform 215ms ease-in-out;
+}
+div.card-area .card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+div.card-area .card img {
+    width: 60%;
+    height: auto;    
+    object-fit: cover;
+    background: transparent;
+    margin-top: 12px;
+}
+div.card-area .card .text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+section div.card-area4 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+section div.card-area4 .card {
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, .5);
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    border-radius: .25rem;
+    padding-bottom: 20px;
+    background: #f5f5f555;
+}
+section div.card-area4 .card h3 {
+    margin-bottom: 10px;
+}
+section div.card-area4 .card ul {
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 0 2px rgba(0, 0, 0, .3);
+    border-radius: .25rem;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+section div.card-area4 .card {
+    transition-delay: var(--delay);
+}
+
+section.bg div.card-area4 div.card {
+    background: #f5f5f5;
+}
+
+section.div4 {
+    height: 205vh;
+}
+
+div.box {
+    width: 60%;
+    height: 50%;
+    background: #fff;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, .5);
+    border-radius: .25rem;
+}
+
+/* Type of Fade */
+div.fade-left,
+div.fade-right,
+div.fade-up,
+div.fade-down {    
+    opacity: 0;
+    transition: opacity 200ms ease-in,
+     transform 525ms ease-in;
+}
+div.fade-left.append,
+div.fade-right.append,
+div.fade-up.append,
+div.fade-down.append {    
+    transform: translateX(0);
+    opacity: 1;
+}
+/* Fade Left */
+div.fade-left {
+    transform: translateX(-50%);
+}
+/* Fade Right */
+div.fade-right {
+    transform: translateX(50%);
+}
+/* Fade Up */
+div.fade-up {
+    transform: translateY(50%);
+}
+/* Fade Down */
+div.fade-down {
+    transform: translateY(-50%);
+}
+
+footer {
+    width: 100vw;
+    height: 200px;
+    background: #393939;
+    display: grid;
+    color: white;
+    font-style: italic;
+    place-items: center;
+}
